@@ -3,28 +3,79 @@
 <head>
     <title>WEB1 - Welcome</title>
     <meta charset="utf-8">
+    <style>
+        body {
+            margin: 0;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+        }
+        h1 {
+            font-size: 45px;
+            text-align: center;
+            border-bottom: 1px solid gray;
+            margin:0;
+            padding: 20px;
+        }
+        ol {
+            border-right: 1px solid gray;
+            width: 100px;
+            margin: 0;
+            padding: 10px;
+        }
+        #grid {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+        }
+        #grid ol {
+            padding-left: 32px;
+        }
+        #grid #article {
+            padding-left: 15px;
+        }
+        #grid #article #art1 {
+            margin-right: 20px;
+        }
+        @media(max-width:800px) {
+            #grid {
+                display: block;
+            }
+            ol {
+                border-right: none;
+            }
+            h1 {
+                border-bottom: none;
+            }
+        }
+    </style>
 </head>
 <body>
     <h1><a href="index.html">WEB</a></h1>
-    <ol>
-        <li><a href="1.html">HTML</a></li>
-        <li><a href="2.html">CSS</a></li>
-        <li><a href="3.html">JavaScript</a></li>
-    </ol>
-    <h2>WEB</h2>
-    <img src="web.jpg" width="100%">
-    <p>
-        웹 페이지(web page, 문화어: 웨브페지)는 월드 와이드 웹 상에 있는 개개의 문서를 가리킨다. 이 문서도 역시 엄연한 웹 페이지이며, 따라서 현재 이 문서를 읽고 있다면 '웹 페이지를 보고 있다'고도 할 수 있다.
+    <div id="grid">
+        <ol>
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">JavaScript</a></li>
+        </ol>
+        <div id="article">
+            <h2>WEB</h2>
+            <img src="web.jpg" width="98.5%">
+            <p>
+                웹 페이지(web page, 문화어: 웨브페지)는 월드 와이드 웹 상에 있는 개개의 문서를 가리킨다. 이 문서도 역시 엄연한 웹 페이지이며, 따라서 현재 이 문서를 읽고 있다면 '웹 페이지를 보고 있다'고도 할 수 있다.
 
-        책에서의 페이지와는 달리, 두 개 이상의 웹 페이지들을 서로 하이퍼링크로 연결시킬 수 있다는 점이 특징이다. 대부분의 웹 페이지는 웹 서버에 저장되며 HTML(또는 XHTML), CSS, 자바스크립트, 그림, 플래시와 같은 동영상으로 구성되어 있다. 이러한 웹 페이지들은 HTTP를 통해 전송하거나 받아온다.
-        
-        일반적으로 대부분의 인터넷 사용자들은 컴퓨터의 웹 브라우저를 통해 웹 페이지들을 읽는다. 또한 의미가 같은 웹 페이지들의 모임을 웹사이트라고 한다.
-        
-        W3C 및 WAI에서는 웹 페이지를 구성할 때 모든 웹 브라우저와 시각 장애인이 사용하는 스크린 리더에서 동일하게 읽어들일 수 있도록 권장하고 있다.
-    </p>
-    <p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/7T7r_oSp0SE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </p>
+                책에서의 페이지와는 달리, 두 개 이상의 웹 페이지들을 서로 하이퍼링크로 연결시킬 수 있다는 점이 특징이다. 대부분의 웹 페이지는 웹 서버에 저장되며 HTML(또는 XHTML), CSS, 자바스크립트, 그림, 플래시와 같은 동영상으로 구성되어 있다. 이러한 웹 페이지들은 HTTP를 통해 전송하거나 받아온다.
+                
+                일반적으로 대부분의 인터넷 사용자들은 컴퓨터의 웹 브라우저를 통해 웹 페이지들을 읽는다. 또한 의미가 같은 웹 페이지들의 모임을 웹사이트라고 한다.
+                
+                W3C 및 WAI에서는 웹 페이지를 구성할 때 모든 웹 브라우저와 시각 장애인이 사용하는 스크린 리더에서 동일하게 읽어들일 수 있도록 권장하고 있다.
+            </p>
+            <p>
+                <iframe width="98.5%" height="400px" src="https://www.youtube.com/embed/7T7r_oSp0SE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </p>
+        </div>
+    </div>
+    
     <p>
         <div id="disqus_thread"></div>
         <script>
