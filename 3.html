@@ -28,24 +28,24 @@
         ">
         -->
         <input id="night_day" type="button" value="night" onclick="
-            if(document.querySelector('#night_day').value === 'night') {
-                document.querySelector('body').style.backgroundColor = 'black';
-                document.querySelector('body').style.color = 'white';
-                document.querySelector('#night_day').value = 'day';
-                var as = document.getElementsByTagName('a');
+            var target = document.querySelector('body');
+            var as = document.getElementsByTagName('a');
+            if(this.value === 'night') {
+                target.style.backgroundColor = 'black';
+                target.style.color = 'white';
+                this.value = 'day';
                 for(var i=0;i<as.length;i++) {
                     as[i].style.color='white';
                 }
-                document.querySelector('#night_day').value = 'day';
+                this.value = 'day';
             }
             else {
-                document.querySelector('body').style.backgroundColor = 'white';
-                document.querySelector('body').style.color = 'black';
-                var as = document.getElementsByTagName('a');
+                target.style.backgroundColor = 'white';
+                target.style.color = 'black';
                 for(var i=0;i<as.length;i++) {
                     as[i].style.color='black';
                 }
-                document.querySelector('#night_day').value = 'night';
+                this.value = 'night';
             }            
         ">
         <div id="grid">
