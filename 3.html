@@ -4,49 +4,34 @@
         <title>WEB1 - JavaScript</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
+        <script>
+            function nightDayHandler(self) {
+                var target = document.querySelector('body');
+                var as = document.getElementsByTagName('a');
+                if(self.value === 'night') {
+                    target.style.backgroundColor = 'black';
+                    target.style.color = 'white';
+                    self.value = 'day';
+                    for(var i=0;i<as.length;i++) {
+                        as[i].style.color='white';
+                    }
+                    self.value = 'day';
+                }
+                else {
+                    target.style.backgroundColor = 'white';
+                    target.style.color = 'black';
+                    for(var i=0;i<as.length;i++) {
+                        as[i].style.color='black';
+                    }
+                    self.value = 'night';
+                }
+            }
+        </script>
     </head>
     <body>
         <h1><a href="index.html">WEB</a></h1>
-        <!--
-        <input type="button" value="night" onclick="
-            document.querySelector('body').style.backgroundColor='black';
-            document.querySelector('body').style.color='white';
-            document.querySelector('ol').style.color='white';
-            var as = document.getElementsByTagName('a');
-            for(var i=0;i<as.length;i++) {
-                as[i].style.color='white';
-            }
-        ">
-        <input type="button" value="day" onclick="
-            document.querySelector('body').style.backgroundColor='white';
-            document.querySelector('body').style.color='black';
-            document.querySelector('ol').style.color='black';
-            var as = document.getElementsByTagName('a');
-            for(var i=0;i<as.length;i++) {
-                as[i].style.color='black';
-            }
-        ">
-        -->
         <input id="night_day" type="button" value="night" onclick="
-            var target = document.querySelector('body');
-            var as = document.getElementsByTagName('a');
-            if(this.value === 'night') {
-                target.style.backgroundColor = 'black';
-                target.style.color = 'white';
-                this.value = 'day';
-                for(var i=0;i<as.length;i++) {
-                    as[i].style.color='white';
-                }
-                this.value = 'day';
-            }
-            else {
-                target.style.backgroundColor = 'white';
-                target.style.color = 'black';
-                for(var i=0;i<as.length;i++) {
-                    as[i].style.color='black';
-                }
-                this.value = 'night';
-            }            
+            nightDayHandler(this);
         ">
         <div id="grid">
             <ol>
